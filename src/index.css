@@ -1,13 +1,268 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--white);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* reset */
+ol,
+ul,
+li,
+a,
+a:active {
+  color: inherit;
+  list-style-type: none;
+  text-decoration: none;
 }
+
+
+body {
+  margin: 0;
+  color: black;
+  font-family: var(--Poppins);
+  font-weight: normal;
+  font-style: normal;
+}
+
+main {
+  padding: 100px 0;
+}
+
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.logo__icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+}
+
+.logo__icon>svg {
+  min-width: 50px;
+  min-height: 50px;
+
+}
+
+
+.logo__title {
+  font-size: 70px;
+  margin-left: 25px;
+}
+
+.navbar {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 30px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.list h1 {
+  transition: all 0.5s ease;
+
+}
+
+.active-link>h1 {
+  background: burlywood;
+}
+
+
+
+
+.list>li:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+.list>li:hover {
+  width: 100%;
+  background: white;
+  color: white
+}
+
+
+
+/* convert */
+.convert {}
+
+.convert__container {
+  max-width: 500px;
+  height: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: rgb(0 130 255 / 40%) 0px 0px 68px 9px, rgb(6 49 44 / 65%) 0px -1px 18px -1px, rgb(193 164 175 / 8%) 1px 2px 5px inset;
+}
+
+/* input */
+
+.Input {}
+
+.Input:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.Input-inp {
+  width: 230px;
+}
+
+.Input-inp,
+select {
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: deepskyblue;
+
+}
+
+select,
+option {
+  cursor: pointer;
+}
+
+select::-webkit-scrollbar {
+  width: 7px;
+}
+
+select::-webkit-scrollbar-track {
+  background: rgb(53, 110, 121);
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: rgb(80, 235, 60);
+  border-radius: 20px;
+  border: 1px solid rgb(175, 175, 171);
+}
+
+/* table */
+.table {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.table__container {
+  box-shadow: rgb(0 130 255 / 40%) 0px 0px 68px 9px, rgb(6 49 44 / 65%) 0px -1px 18px -1px, rgb(193 164 175 / 8%) 1px 2px 5px inset;
+
+}
+
+
+.table__container,
+th,
+td {
+  /* padding: 10px; */
+}
+
+.table__header {
+  background: blueviolet;
+  box-shadow: 0px -11px 31px 3px white;
+  border-radius: 7px;
+  box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
+
+}
+
+.table__header>div {
+  background: inherit;
+}
+
+.table__header,
+.table__list {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.table__body {
+  max-height: 800px;
+  overflow-y: scroll;
+}
+
+
+.table__body::-webkit-scrollbar {
+  width: 7px;
+}
+
+.table__body::-webkit-scrollbar-track {
+  background: rgb(53, 110, 121);
+}
+
+.table__body::-webkit-scrollbar-thumb {
+  background-color: rgb(80, 235, 60);
+  border-radius: 20px;
+  border: 1px solid rgb(175, 175, 171);
+}
+
+footer {
+  text-align: center;
+}
+
+footer>h2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.telegram {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  display: flex;
+}
+
+
+@media only screen and (max-width:375px) {
+  .logo__title {
+    font-size: 50px;
+  }
+}
+
+
+:root {
+  --bg-color: #2c2e3b;
+  --white: #fff;
+  --blue: #0066FF;
+  --gray: #969AA0;
+
+  /* font-family */
+  --Poppins: 'Poppins', sans-serif;
+  --Heebo: 'Heebo', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
