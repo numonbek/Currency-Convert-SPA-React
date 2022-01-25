@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/currency-convert/static/css/main.9a14587a.css",
+    "main.js": "/currency-convert/static/js/main.f6698557.js",
+    "static/media/currency-svg.svg": "/currency-convert/static/media/currency-svg.c46bfd972e96694c0d0a86f329aa0710.svg",
+    "static/media/telegram.svg": "/currency-convert/static/media/telegram.8c45a8e3d6eb06eaddec5e722dbbafde.svg",
+    "index.html": "/currency-convert/index.html",
+    "main.9a14587a.css.map": "/currency-convert/static/css/main.9a14587a.css.map",
+    "main.f6698557.js.map": "/currency-convert/static/js/main.f6698557.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a14587a.css",
+    "static/js/main.f6698557.js"
+  ]
+}
